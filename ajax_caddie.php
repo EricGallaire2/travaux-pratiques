@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include("fonctions.php");
+    require_once("fonctions/connexion.php");
     
     //echo "ajax_caddie";
 
@@ -20,10 +20,10 @@ include("fonctions.php");
    
         
 
-        $getBDD = getBDD(); // Connexion BDD récupéré dans fichier fonctions.php
+        $connexion = connexion(); // Connexion BDD récupéré dans fichier fonctions.php
         $sql='SELECT id FROM caddie WHERE sessionid =:sessionid AND idprod = :idproduit';
         echo "deja $deja $sql";
-        $requete = $getBDD->prepare($sql);
+        $requete = $connexion->prepare($sql);
         $requete->execute(array(':sessionid' => $sessionid,':idproduit' => $_POST['idproduit']));
         $resultat = $requete->fetch();
         //$requete -> closeCursor();
@@ -31,21 +31,17 @@ include("fonctions.php");
 
         echo "deja $deja";
 
-        $getBDD = getBDD(); // Connexion BDD récupéré dans fichier fonctions.php
+        $connexion = connexion();
         try {
-
-
-
             if($deja==true) {
-                //echo "$deja AJOUT -> UPDATE caddie SET qte = qte + :qty WHERE idprod = :idproduit AND sessionid ='".$sessionid."'";
                 $sql="UPDATE caddie SET qte = qte + :qty WHERE idprod = :idproduit AND sessionid ='".$sessionid."' ";
-                $requete = $getBDD->prepare($sql);
+                $requete = $connexion->prepare($sql);
                 $requete->execute(array( ':qty' => $_POST['qty'], ':idproduit' => $_POST['idproduit']));
             }
             else {
             
                 $sql="INSERT INTO caddie (idprod, qte, sessionid) VALUES (:idproduit, :qty, '$sessionid')";
-                $requete = $getBDD->prepare($sql);
+                $requete = $connexion->prepare($sql);
                 $requete->execute(array(':idproduit' => $_POST['idproduit'], ':qty' => $_POST['qty']));
             }
         }
@@ -57,11 +53,11 @@ include("fonctions.php");
 
     // Vide le panier
     if($sessionid!="" && $_POST['action']=="vider") {
-        $getBDD = getBDD(); // Connexion BDD récupéré dans fichier fonctions.php
+        $connexion = connexion(); // Connexion BDD récupéré dans fichier fonctions.php
         try {
             $sql="DELETE FROM caddie WHERE sessionid='$sessionid'";
             echo "EFFACE ->  ".$sql."";
-            $requete = $getBDD->prepare($sql);
+            $requete = $connexion->prepare($sql);
             $requete->execute();
         }
         catch(PDOException $e){

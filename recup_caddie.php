@@ -7,11 +7,11 @@ session_start();
         $_SESSION[''.$sessionid.''];
     }
     
-include("fonctions.php");
+    require_once("fonctions/connexion.php");
 
-    $getBDD = getBDD(); // Connexion BDD récupéré dans fichier fonctions.php
+    $connexion = connexion(); // Connexion BDD récupéré dans fichier fonctions.php
     try {
-        $requete = $getBDD->prepare('SELECT C.id, C.sessionid, C.qte, C.idprod, C.idclient, P.titre FROM caddie C, pizzas P WHERE C.idprod=P.id AND sessionid=:sessionid');
+        $requete = $connexion->prepare('SELECT C.id, C.sessionid, C.qte, C.idprod, C.idclient, P.titre FROM caddie C, pizzas P WHERE C.idprod=P.id AND sessionid=:sessionid');
         $requete->execute(array(':sessionid' => $sessionid));
     
         while($resultat = $requete->fetch()) {

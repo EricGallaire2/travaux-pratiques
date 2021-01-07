@@ -146,58 +146,13 @@ include("_navbar.php");
                 </script>
                 <h5 id="div_voir_caddie"><!-- ici mon caddie--></h5>
 
-
                 <button onclick="$.ajax({url:'ajax_add.php', data:'vider=oui', type:'POST', datatype:'JSON'}); voir_caddie();" class="btn btn-danger float-right">Vider le caddie</button>
-                
-
-
-
-
-
-
-
-
-
-
-                <!--
-                <a class="btn btn-sm btn-danger float-right" onclick="$.ajax({url : 'ajax_caddie.php', data: 'action=vider', type : 'POST', dataType : 'json'}); recup_caddie(); ">Vider le caddie</a>
-                -->
-                <script>			
-                /*
-                var timeout = setInterval(recup_caddie, 1000000);
-                function recup_caddie () { 
-
-                    $('#recup_caddie').load('recup_caddie.php');
-				}
-				*/
-                </script>
-
-				<div id="recup_caddie"></div>	
                 
             </div>
 
         </div>
 
     </div>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-    <BR/>
-
 <?php 
 include("_footer.php");
 ?>

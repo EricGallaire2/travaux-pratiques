@@ -1,7 +1,7 @@
 <?php
     require("fonctions/connexion.php"); // Connexion à la BDD en PDO avec Try/Catch
     require('fonctions/urlise.php'); // Fonction pour remplacer les espaces et caractères spéciaux pour rendre une URL propre
-    require('fonctions/autoincrement.php'); // Fonction pour remplacer les espaces et caractères spéciaux pour rendre une URL propre
+    //require('fonctions/autoincrement.php'); // Fonction pour remplacer les espaces et caractères spéciaux pour rendre une URL propre
     require('fonctions/fonctions_images.php'); // Fonctions de traitement des images
     include('fonctions/max_upload.php'); // Fonctions de calcul de la capacité du serveur en octets et Mo
 

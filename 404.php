@@ -10,7 +10,7 @@
 <?php 
 include("_navbar.php");
 ?>
-    <div class="container text-center">
+    <div class="container text-center" style="height:800px;">
         <h1 class="text-center">Erreur 404 personnalisée</h1>
 
         <h3 id="Crono"></h3>
@@ -27,35 +27,9 @@ include("_navbar.php");
             clearInterval(timer);
         }
     }, 1000);
-    </script>
-         <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-        <BR/>
-   
+    </script>   
 <?php 
 include("_footer.php");
 ?>
-
 </body>
 </html>

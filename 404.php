@@ -11,7 +11,7 @@
 include("_navbar.php");
 ?>
     <div class="container text-center" style="height:800px;">
-        <h1 class="text-center">Erreur 404 personnalisée</h1>
+        <h1 class="text-center">Erreur 404 personnalisée.... merci de patienter quelques secondes</h1>
 
         <h3 id="Crono"></h3>
         <meta http-equiv="refresh" content="<?= $delai ?>;URL=index.php">

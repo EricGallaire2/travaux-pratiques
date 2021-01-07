@@ -1,0 +1,6 @@
+{
+    "head_title":"Bienvenue",
+    "site_description":"Pour voir le code source il suffit de <a href=\"javascript:;\" onclick=\"$('#jsonfr').slideToggle(1000); $('#source').slideToggle(2000);\">cliquer</a> !",
+    "page_content":"Ce n'est pas si difficile d'utilisation ! Il suffit d'être rigoureux et ingénieux et ça fonctionnera immédiatement.",
+    "footer":"mon contenu en français"
+}

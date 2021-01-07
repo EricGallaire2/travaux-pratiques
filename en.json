@@ -1,0 +1,6 @@
+{
+    "head_title":"Welcome",
+    "site_description":"For watching source code need <a href=\"javascript:;\" onclick=\"$('#jsonen').slideToggle(1000); $('#source').slideToggle(2000);\">to be clicked here</a> !",
+    "page_content":"It is not that difficult to use ! You just need to be rigorous and resourceful and it will work immediately",
+    "footer":"My english content"
+}

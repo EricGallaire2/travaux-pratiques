@@ -1,0 +1,28 @@
+AuthUserFile 	/home/ericwebc/public_html/travaux-pratiques/.htpasswd
+AuthName "Acces Restreint"
+AuthType Basic
+Require valid-user
+
+ErrorDocument  404  https://www.eric-web.com/travaux-pratiques/404.php
+
+order allow,deny
+allow from all
+deny from 178.175.146.130
+
+RewriteEngine On
+
+# https://www.eric-web.com/travaux-pratiques/mapage.html
+RewriteRule ^mapage.html /travaux-pratiques/autre-page.php [L]
+
+
+# https://www.eric-web.com/travaux-pratiques/page-55448/mon-texte.php
+RewriteRule ^page-([A-Z0-9]+)/(.*).php$ /travaux-pratiques/page.php?var=$1 [L]
+# ou aussi 
+# https://www.eric-web.com/travaux-pratiques/page-2/autre-jolie-page
+RewriteRule ^page-([0-9]+)/(.*)$ /travaux-pratiques/page.php?var=$1 [L]
+
+# https://www.eric-web.com/travaux-pratiques/mon-texte/5454.html
+# https://www.eric-web.com/travaux-pratiques/chemin/21.html
+RewriteRule ^(.*)/([0-9]+).html$ /travaux-pratiques/entier.php?var=$2 [L]
+
+

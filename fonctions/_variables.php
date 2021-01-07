@@ -1,8 +1,8 @@
 <?php 
 	// Définition des variables constantes pour connexion BDD
-	DEFINE("BDD", "ericwebc_twdwwm");
-	DEFINE("USER", "ericwebc_user");
+	DEFINE("BDD", "labdd");
+	DEFINE("USER", "lesuer");
 	DEFINE("HOST", "localhost");
-	DEFINE("PASSW", "hqzEba!qXb");
+	DEFINE("PASSW", "motdepasse");
 	DEFINE("CHARSET", "utf8mb4");
 ?>
